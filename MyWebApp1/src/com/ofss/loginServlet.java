@@ -33,7 +33,7 @@ public class loginServlet extends HttpServlet {
 		String pass=request.getParameter("pass");
 		if(un.equals(pass))
 		{
-			pw.write("Succes");
+			pw.write("Successfully Registered....");
 		}
 		else
 		{
