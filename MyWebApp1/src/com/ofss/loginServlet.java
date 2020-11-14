@@ -31,14 +31,28 @@ public class loginServlet extends HttpServlet {
 		PrintWriter pw=response.getWriter();
 		String un=request.getParameter("un");
 		String pass=request.getParameter("pass");
-		if(un.equals(pass))
-		{
-			pw.write("Successfully Registered into ....");
+		if(un!=""&&pass!="") {
+			if(un.equals(pass))
+			{
+				pw.write("Successfully Registered...");
+			}
+			else
+			{
+				pw.println("<h4 style='color:red'>Please enter right username and password</h4>");
+			}
 		}
 		else
 		{
-			pw.write("You are not logined, try again with right username and password");
+			pw.println(
+					"<!DOCTYPE html>"
+					+"<html>"
+					+"<body style='background-color:yellow'>"
+					+"<h1 style='color:red'  > please enter username and password both</h1>"
+					+"</body>"
+					+"</html>"
+					);
 		}
+		
 		
 		
 	}
