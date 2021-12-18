@@ -20,6 +20,9 @@ public class StudentController {
 	@Autowired
 	StudentService service;
 	
+	
+	//For Get All students
+	
 	@GetMapping("/student")
 	public List<Student> getAllStudent(){
 		return this.service.getAllStudent();
